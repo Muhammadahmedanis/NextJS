@@ -1,0 +1,21 @@
+NextJS provide 3 types of rendering
+Clinet side 
+Server side
+Static Side Generation & ISR
+
+in react 
+babel compile code and convert into react.createElement(tomakeplainJS) then send to browser and browser create DOM element 
+
+inn next
+after convert into react.createElment then convert into html string then send html as html file
+final jsx convert into and send from server not browser 
+
+we cannot run browser code on server that why we use client 
+
+consider example of window if use useClient frist run onserver and show error and then run on browser 
+
+next js run react code on server and generate pure html and send 
+but in normal react send empty html file and js come and create js html file and paint browser
+
+React has static server as request come it will serve 
+but next js hs dynamic server
