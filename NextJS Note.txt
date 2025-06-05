@@ -19,3 +19,23 @@ but in normal react send empty html file and js come and create js html file and
 
 React has static server as request come it will serve 
 but next js hs dynamic server
+
+
+working fir go root paage.js then layout.js and then other folder to page.js
+
+
+RENDERING_PARADIAM
+Where html of app can be generated?
+
+Server: get html from server and render on browser  SSR
+SSR has good SEO but not good response time
+
+Client: like react work                             CSR
+CSR has good response time but not good SEO becuse og empty html file
+
+SSR has two types:
+SSR: Server side Generation
+ISR: Incremental Side regeneration
+
+in NextJS jis page par ham honga page reload karinga us ka html load hoga and baqi ka RSC losd hoga in production and complete all paes ka data nhi aaiga jiska link visible honga us ka hi aaiga and then jase jase visible honga aata jaiga data in RSC
+
