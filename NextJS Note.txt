@@ -39,3 +39,6 @@ ISR: Incremental Side regeneration
 
 in NextJS jis page par ham honga page reload karinga us ka html load hoga and baqi ka RSC losd hoga in production and complete all paes ka data nhi aaiga jiska link visible honga us ka hi aaiga and then jase jase visible honga aata jaiga data in RSC
 
+NextJS has a server side rendering
+Server components execute only on server where as client componenets excute on server as well as client 
+async await is not supported on client components only server

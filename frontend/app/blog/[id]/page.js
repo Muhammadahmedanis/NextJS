@@ -17,6 +17,12 @@ export const revlidate = 5;
 
 //  for static site generation SSR
 
+//  to make static page to dynamic rendering we use
+// export const dynamic = "force-dynamic";
+//  or use const Services = async ({ searchParams }) => {    }
+// const myCookies = await cookies();
+//  console.log(myCookies); 
+
 export const dynamicParams = false;
 export async function generateStaticParams() {
   // const response = await fetch() 
@@ -36,6 +42,8 @@ export default async function Blog({ params }) {
     notFound();
   }
   return (
-    <div>Blog: {id}</div>
+    <>
+      <div>Blog: {id}</div>
+    </>
   )
 }
