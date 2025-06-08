@@ -47,3 +47,19 @@ export default async function Blog({ params }) {
     </>
   )
 }
+
+
+
+export default async function Blog1({ params }) {
+  const { id } = await params;
+
+  if (id % 2 == 0) {
+    throw new Error("error occur"); // automatically get error from js file
+  }
+
+  return (
+    <>
+      <div>Blog: {id}</div>
+    </>
+  )
+}

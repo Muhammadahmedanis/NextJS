@@ -1,7 +1,7 @@
 //  client side rendering component
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 export default function page() {
     const[post, setPost] = useState([]);
 
@@ -50,5 +50,39 @@ const posts = async () => {
         </>
     )
 }
+
+//  above post component block complete page so we do 
+// make componenet and then make other componenet for api call and import here
+// below is sequential method
+const posts1 = async () => {
+    <>
+        <Suspense fallback='loading'>
+            {/* componenet */}
+        </Suspense>
+        <Suspense fallback='loading'>
+            {/* componenet2s */}
+        </Suspense>
+    </>
+}
+
+// Parallel data fetching
+
+async function fetchData(url) {
+    const response = await fetch(url);
+    return await response.json();
+}
+
+const todos = async () => {
+    const[todos, data2s, data3s] = await Promise.all([
+        // fetchData(""),
+        // fetchData(""),
+        // fetchData(""),
+    ]);
+}
+// const[todos, data2s, data3s] = await Promise.all([
+//     todosResponse.json(),
+//     slowResponse2s.json(),
+//     slowResponse3s.json(),
+// ])
 
 // in fetch of next js it has some own feature fnunctionality 

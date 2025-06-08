@@ -1,6 +1,8 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
 
+import ThemeContext from "@/context/ThemeContext";
+
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -25,8 +27,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <ThemeContext>
+          {children}
+        </ThemeContext>
         {/* <header style={{ background: "green"}}>Header</header> */}
-        {children}
         {/* <footer style={{ background: "brown"}}>Footer</footer> */}
       </body>
     </html>

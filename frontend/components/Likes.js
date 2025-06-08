@@ -1,9 +1,9 @@
-// export default async function Likes() {
-//   await new Promise((resolve) => setTimeout(resolve, 2000))
-//   return (
-//     <div>2K Like</div>
-//   )
-// }
+export default async function Likes() {
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+  return (
+    <div>2K Like</div>
+  )
+}
 
 
 "use client"
