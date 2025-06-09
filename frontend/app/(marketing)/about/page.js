@@ -1,8 +1,19 @@
+"use client"
 
-function about() {
+// client side exception and cause redering on Client
+
+import { useState } from "react"
+export default function page() {
+    const[fruit, setFruit] = useState(['Mango, Apple'])
   return (
-    <div>about page</div>
+    <div>
+        <p>Fruits</p>
+        <button onClick={() => setFruit(null)}>Click Me</button>
+        {
+            fruit?.map((val, id) => (
+                <li key={id}>{val}</li>
+            ))
+        }
+    </div>
   )
 }
-
-export default about

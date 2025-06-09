@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import styles from './blogID.module.css'
 
 // for dynamic id
 export async function generateMetadata({ params }) {
@@ -43,7 +44,8 @@ export default async function Blog({ params }) {
   }
   return (
     <>
-      <div>Blog: {id}</div>
+      <div >Blog: {id}</div> 
+      {/* className={styles.title} */}
     </>
   )
 }

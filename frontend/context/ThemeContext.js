@@ -2,14 +2,14 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 export const userContext = createContext();
-export default UserProvider = ({ children }) => {
+const UserProvider = ({ children }) => {
      return(
-        <userContext.Provider value={{ user, loading, updateUser, clearUser}}>
+        <userContext.Provider >
             {children}
         </userContext.Provider>
     )
 };
-
+// value={{ user, loading, updateUser, clearUser}}
 export const useUser = () => useContext(userContext);
-
+export default UserProvider
 //  cannot use context api and redux on server components

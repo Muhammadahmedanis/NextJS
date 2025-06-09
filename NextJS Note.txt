@@ -45,3 +45,5 @@ async await is not supported on client components only server
 
 in production we use npm start > server.log 2>&1
 if we restart server to remsin previous error in file we do npm start >> server.log 2>&1
+
+npx create-next-app@latest
